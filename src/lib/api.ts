@@ -100,6 +100,7 @@ When presenting results:
     - 📍 Address details
     - 🔗 [View on Map](location_url)
     - ⏰ Opening hours or status (e.g., "Open now · Closes 10 PM" or "Open 24 hours")
+    - contact details if available
     - 💬 Top review summary in 1-2 lines
 
 - Use > blockquotes for important safety warnings
