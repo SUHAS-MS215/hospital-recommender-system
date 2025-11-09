@@ -1,0 +1,42 @@
+# Project Rules
+
+This is a Next.js 16 project with TypeScript and shadcn/ui.
+
+## Tech Stack
+
+- Next.js 16 (App Router)
+- TypeScript (strict mode)
+- Tailwind CSS v4
+- shadcn/ui components
+- Radix UI primitives
+- Lucide React icons
+
+## Code Style
+
+- Use TypeScript for all new files
+- Use functional components with hooks
+- Prefer server components by default (use 'use client' only when needed)
+- Use shadcn/ui components for UI elements
+- Follow the existing import alias pattern (@/components, @/lib, etc.)
+
+## Component Guidelines
+
+- Place reusable components in `src/components/`
+- Place shadcn/ui components in `src/components/ui/`
+- Use Tailwind CSS for styling
+- Ensure components are accessible (ARIA labels, keyboard navigation)
+
+## File Organization
+
+- Pages go in `src/app/`
+- Shared utilities in `src/lib/`
+- Custom hooks in `src/hooks/`
+- UI components in `src/components/ui/`
+
+## Adding New Components
+
+To add shadcn/ui components:
+
+```bash
+npx shadcn@latest add [component-name]
+```
