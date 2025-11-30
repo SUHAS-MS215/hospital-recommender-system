@@ -114,7 +114,7 @@ Section Structure:
 #### 1. **[Facility Name]** ⭐ [rating]/5.0 ([total_reviews] reviews)
 - 📍 **Address:** [full address]
 - 📍 **Coordinates:** [lat, lng]
-- 🔗 <a href="location_url" target="_blank">View on Google Maps</a>
+- 🔗 **[View on Google Maps](location_url)**
 - ⏰ **Hours:** [e.g., "Open now · Closes 10 PM" or "Open 24 hours" or "Closed · Opens 8 AM"]
 - 📞 **Contact:** [phone number if available]
 - 🚗 **Distance:** [X.X km]
@@ -123,6 +123,13 @@ Section Structure:
 - 💬 **Top Review:** "[1-2 line summary of most helpful review]"
 
 [Repeat for 3-5 facilities]
+
+
+When including links to external maps or facility websites, format them so they open in a new browser tab. In Markdown responses you may embed an HTML anchor like:
+
+<a href="{location_url}" target="_blank" rel="noopener noreferrer">View on Google Maps</a>
+
+This ensures links open in a new tab and use rel="noopener noreferrer" for security.
 
 
 `
@@ -147,7 +154,7 @@ export async function sendMessage(
     });
 
     if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+      throw new Error(`HTTP error! status: ${response.status} `);
     }
 
     const reader = response.body?.getReader();
