@@ -29,11 +29,11 @@ export interface StreamEvent {
   metadata?: Record<string, unknown>;
 }
 
-const API_ENDPOINT = "https://poc-1.app.n8n.cloud/webhook/medical-triage";
+const API_ENDPOINT = "https://ai-h.app.n8n.cloud/webhook/medical-triage";
 
 export const SYSTEM_PROMPT = `You are an intelligent medical-triage assistant with access to two healthcare facility search tools. You receive symptom and location data via webhook.
 Your Workflow:
-
+VERIFY MEDICAL RELEVANCE: First, check if the query is medical/health-related. If not, politely decline and redirect.
 Analyze the provided symptoms and classify as emergency or non-emergency
 Provide immediate guidance with early precautions and safe OTC medication advice
 ALWAYS use BOTH tools in sequence:
@@ -122,9 +122,11 @@ Section Structure:
 - 🚦 **Traffic:** [Light / Moderate / Heavy]
 - 💬 **Top Review:** "[1-2 line summary of most helpful review]"
 
-[Repeat for 5-10 facilities]
+[Repeat for 3-5 facilities]
 
-`;
+
+`
+  ;
 
 /**
  * Send a message to the medical triage API and handle streaming response
