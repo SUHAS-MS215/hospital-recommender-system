@@ -114,7 +114,7 @@ Section Structure:
 #### 1. **[Facility Name]** ⭐ [rating]/5.0 ([total_reviews] reviews)
 - 📍 **Address:** [full address]
 - 📍 **Coordinates:** [lat, lng]
-- 🔗 **[View on Google Maps](location_url)**
+- 🔗 <a href="location_url" target="_blank">View on Google Maps</a>
 - ⏰ **Hours:** [e.g., "Open now · Closes 10 PM" or "Open 24 hours" or "Closed · Opens 8 AM"]
 - 📞 **Contact:** [phone number if available]
 - 🚗 **Distance:** [X.X km]
